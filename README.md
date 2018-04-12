@@ -26,16 +26,16 @@ Currently supported drivers:
 ```javascript
 // LatLng.lookup returns a promise
 LatLng.lookup('Mansfield').then((result) => {
-    console.log(result)
+    console.log(result);
     // -> { name: 'Mansfield', lat: 53.13333, lng: -1.2 }
 })
 
 // e.g. add lng/lat from address when creating a user 
 async function createUser(userData) {
-    let location = await LatLng.lookup(userData.Address)
-    userData.lat = location.lat
-    userData.lng = loncation.lng
-    User.save(userData)
+    let location = await LatLng.lookup(userData.Address);
+    userData.lat = location.lat;
+    userData.lng = location.lng;
+    User.save(userData);
 }
 ```
 
