@@ -1,12 +1,13 @@
 {
-  "name": "longlatter",
+  "name": "latlng",
   "version": "0.0.0",
   "description": "Fetch and cache longitude and latitudes for addresses and place names.",
   "main": "index.js",
-  "repository": "git@github.com:andrewblaney/longlatter.git",
+  "repository": "git@github.com:andrewblaney/latlng.git",
   "author": "Andrew Blaney <andrew.blaney@bbc.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "request": "^2.85.0"
+    "request": "^2.85.0",
+    "sqlite3": "^4.0.0"
   }
 }

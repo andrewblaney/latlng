@@ -1,13 +1,9 @@
-import latlng from 'latlng';
+const LatLng = require("latlng")('sqlite');
 
-const latlng = latlng('http://mydatasrc.com/api/stuff', '.geometry.location.lng');
-
-let address = "73 Arun Dale, Mansfield Woodhouse, NG199RE";
-
-let [lat, lng] = latlng.lookup(`${myAddress}`);
-
-if (address) {
-    console.log(`${address} is at lat:${lat}, lng:${lng}`);
-} else {
-    console.error(`Latitude and Longitude not found for ${address}`);
+async function doLookup() {
+    let N8 =  await LatLng.lookup('N8');
+    let NG19 =  await LatLng.lookup('NG19');
+    console.log(N8, NG19.lat);
 }
+
+doLookup();
