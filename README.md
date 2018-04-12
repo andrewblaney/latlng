@@ -2,7 +2,7 @@
 
 🗺 Fetch and cache longitude and latitudes for addresses and place names.
 
-A package that leverage [DSTK](http://www.datasciencetoolkit.org/)s Google-style Geocoder to find the latitude and 
+A package that leverages [DSTK](http://www.datasciencetoolkit.org/)s Google-style Geocoder to find the latitude and 
 longitude values for a given location/place. If a location already exists in the database the details are returned,
 if not the external API is called, the data is returned to the user and stored in the database for quick return on 
 next query.
@@ -28,7 +28,7 @@ Currently supported drivers:
 LatLng.lookup('Mansfield').then((result) => {
     console.log(result);
     // -> { name: 'Mansfield', lat: 53.13333, lng: -1.2 }
-})
+});
 
 // e.g. add lng/lat from address when creating a user 
 async function createUser(userData) {
