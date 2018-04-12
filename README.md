@@ -23,7 +23,7 @@ Currently supported drivers:
 
 ### LatLng#lookup(location)
     
-```javascript
+```ecmascript 6
 // LatLng.lookup returns a promise
 LatLng.lookup('Mansfield').then((result) => {
     console.log(result);
@@ -37,6 +37,15 @@ async function createUser(userData) {
     userData.lng = location.lng;
     User.save(userData);
 }
+
+LatLng.getAll().then((result) => {
+    console.log(result);
+    // -> [
+    //      { name: 'Mansfield', lat: 53.13333, lng: -1.2 },
+    //      { name: 'London', lat: 51.5072648, lng: -0.1278328 },
+    //      ...
+    //      ]
+});
 ```
 
 ### Todo

@@ -18,6 +18,12 @@ module.exports = class LatLng {
         return location;
     };
 
+    async getAll() {
+        let locations = await this.adapter.getAll();
+        if (locations) return locations;
+        return false;
+    }
+
     async lookupFromAPI(name) {
         let encodedName = encodeURI(name);
         let url = `http://www.datasciencetoolkit.org/maps/api/geocode/json?sensor=false&address=${encodedName}`;
