@@ -23,6 +23,16 @@ module.exports = class sqlite {
         });
     }
 
+    getAll() {
+        return new Promise((resolve, reject) => {
+            this.db.all('SELECT * FROM locations;', (err, rows) => {
+                if (err) return console.error(err.message);
+                resolve(rows ? rows : false);
+            });
+        });
+    }
+
+
     addToDatabase(location) {
         this.db.run("INSERT INTO locations VALUES (?, ?, ?);", [location.name, location.lat, location.lng], (e) => {
             if (e) console.error(e);
