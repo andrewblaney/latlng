@@ -13,7 +13,7 @@ module.exports = class LatLng {
         if (location) return location;
 
         location = await this.lookupFromAPI(name);
-        this.adapter.addToDatabase(location);
+        if (location) this.adapter.addToDatabase(location);
 
         return location;
     };
