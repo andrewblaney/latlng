@@ -11,7 +11,7 @@ next query.
 - Node v8
 
 ### Installation
-`npm install git://github.com/andrewblaney/latlng.git`
+`yarn add https://github.com/andrewblaney/latlng`
 
 ## Usage
 
@@ -39,11 +39,12 @@ async function createUser(userData) {
 }
 ```
 
-### TODO
+### Todo
 - Add postgres / mysql adapters
 - Add option to point to own hosted DSTK
 - Add minified build
 - Tests
+- Publish on NPM
 
 ### Credits
 Uses [DSTK](http://www.datasciencetoolkit.org/) for lat/long lookup.
